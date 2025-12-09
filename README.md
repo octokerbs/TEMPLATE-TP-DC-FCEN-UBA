@@ -1,12 +1,10 @@
-![Showcase](Showcase.png)
+# Uso
+Para usar este template, suban los archivos del directorio `template/` a typst y escriban sobre `main.typ`
 
-# Use
-To use it in your typst project, add the following files:
-- caratula.typ
-- logo_dc.jpg
-- logo_uba.jpg
-- main.typ
-- references.yml
-- template.typ
+Con la ayuda de Nicolás Yañez que mejoró el template.
 
-Write your project in the main.typ file
+![Template](showcase/Template%20TP%20-%20DC%20UBA-1.png)
+![Template](showcase/Template%20TP%20-%20DC%20UBA-2.png)
+![Template](showcase/Template%20TP%20-%20DC%20UBA-3.png)
+![Template](showcase/Template%20TP%20-%20DC%20UBA-4.png)
+![Template](showcase/Template%20TP%20-%20DC%20UBA-5.png)

@@ -1,8 +1,8 @@
-#import "template.typ": *
 #import "caratula.typ": caratula
-#import "@preview/hydra:0.6.2": hydra // Para los índices
+#import "@preview/hydra:0.6.2": hydra
+#set text(lang: "es", region: "ar")
+#set page(margin: (x: 1.6cm),)
 
-// ======================== CARATULA ========================
 #let titulo = "Descripción del TP"
 
 #show: caratula.with(
@@ -12,31 +12,29 @@
   grupo: "Grupo 42",
   fecha: "14 de Diciembre de 2025",
   integrantes: (
-    (nombre: "Apellido Nombre", lu: "001/01", email: "burdmankevin@gmail.com"),
-    (nombre: "Apellido Nombre", lu: "002/01", email: "pablodherrero@gmail.com"),
-    (nombre: "Apellido Nombre", lu: "003/01", email: "octaviokerbs@gmail.com"),
-    (nombre: "Apellido Nombre", lu: "004/01", email: "nicyanz98@gmail.com"),
+    (nombre: "Apellido Nombre", lu: "001/01", email: "alumno1@gmail.com"),
+    (nombre: "Apellido Nombre", lu: "002/01", email: "alumno2@gmail.com"),
+    (nombre: "Apellido Nombre", lu: "003/01", email: "alumno3@gmail.com"),
+    (nombre: "Apellido Nombre", lu: "004/01", email: "alumno4@gmail.com"),
   ),
 )
 
-// ======================== INDICE ========================
-#pagebreak()
-
 // Recuadro rojo en referencias
 #show selector(outline): it => {
-  show regex("\d+"): num => {
-    box(num, stroke: 1pt + red, outset: (bottom: 1pt, x: 1pt, y: 0.3pt))
+  show regex("\d+$"): num => {
+    box(num, stroke: 1pt + red, outset: (bottom: 1.5pt, x: 1pt, y: 1pt))
   }
   it
 }
 #show selector(cite): it => {
   show regex("\\[\d+\\]"): num => {
-    box(num, stroke: 1pt + red, outset: (bottom: 1pt, x:-3.2pt, y: -0.5pt))
+    box(num, stroke: 1pt + red, outset: (bottom: 2pt, x:-2.7pt, y: 0.6pt))
   }
   it
 }
 
-#outline(title: "Índice")
+#set heading(numbering: "1.")
+#show bibliography: set heading(numbering: "1.")
 
 #set page(numbering: "1")
 
@@ -54,18 +52,12 @@
   }
 )
 
-// Take a look at the file `template.typ` in the file panel
-// to customize this template and discover how it works.
-#show: project.with(
-  title: "Template TP - DC UBA",
-  authors: (
-    "Octo Kerbs ",
-  ),
-)
+#set text(size: 10pt, font: "Arial")
 
-// We generated the example code below so you can see how
-// your document will look. Go ahead and replace it with
-// your own content!
+#outline(title: "Índice")
+#pagebreak()
+
+#set par(justify: true)
 
 // ======================== CONTENIDO ========================
 = Definir referencias
