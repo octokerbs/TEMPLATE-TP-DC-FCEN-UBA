@@ -98,20 +98,6 @@ Para saber mas pueden consultar la sintaxis de typst @typst_syntax
 // ======================== REFERENCIAS ========================
 #pagebreak()
 
-#set page(
-  header: context {
-    if counter(page).get().first() > 1 [
-      #let elems = query(selector(heading))
-      #if elems.len() > 0 {
-          emph[#elems.last().body]
-      }
-      #h(1fr)
-      Diseño e Implementación de Honeytokens
-      #line(length: 100%, stroke: 0.5pt + black)
-    ]
-  }
-)
-
 #show link: it => {
   set text(fill: blue, style: "italic")
   underline(it)
