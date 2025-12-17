@@ -52,7 +52,7 @@
   }
 )
 
-#set text(size: 10pt, font: "Arial")
+#set text(size: 10pt)
 
 #outline(title: "Índice")
 #pagebreak()
